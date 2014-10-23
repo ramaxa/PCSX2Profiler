@@ -13,9 +13,7 @@ reload(sys)
 sys.setdefaultencoding('utf8')
 
 #path_to_iso = os.path.join(os.environ['HOME'], 'ISO')
-path_to_iso = os.path.join('media', 'xbmc', 'Downloads', 'ISO')
 pcsx2_bin = 'pcsx2'
-
 path_to_pcsx2cfg = os.path.join(os.environ['HOME'], '.config', 'pcsx2', 'inis')
 path_to_profiler = os.path.join(os.environ['HOME'], '.config', 'pcsx2profiler')
 
