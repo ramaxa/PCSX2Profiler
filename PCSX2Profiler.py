@@ -4,7 +4,6 @@
 import sys
 
 from PyQt4 import QtCore, QtGui
-from PyKDE4.kdeui import KLineEdit
 
 import os
 import shutil
@@ -14,6 +13,7 @@ sys.setdefaultencoding('utf8')
 
 #path_to_iso = os.path.join(os.environ['HOME'], 'ISO')
 pcsx2_bin = 'pcsx2'
+
 path_to_pcsx2cfg = os.path.join(os.environ['HOME'], '.config', 'pcsx2', 'inis')
 path_to_profiler = os.path.join(os.environ['HOME'], '.config', 'pcsx2profiler')
 
@@ -74,9 +74,8 @@ class MainWindow(QtGui.QDialog):
 
         self.line0 = QtGui.QHBoxLayout()
 
-        self.profileName = KLineEdit(self)
-        self.profileName.setClearButtonShown(True)
-        self.profileName.setClickMessage('Profile name')
+        self.profileName = QtGui.QLineEdit(self)
+        self.profileName.setPlaceholderText('Profile name')
         self.line0.addWidget(self.profileName, 1)
 
         self.btnAddNew = QtGui.QPushButton('Create', self)
